@@ -9,11 +9,58 @@
       href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./src/styles/variables.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avenga</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="page">
+      <header class="header">
+        <div class="logoSearchContainer">
+          <img src="./src/assets/icons/logo-icon.svg" alt="Avenga logo" />
+          <span class="searchIcon"></span>
+        </div>
+        <nav class="nav">
+          <ul class="navList">
+            <li class="navItem">
+              <a href="#" class="navLink">Home</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Industries</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Services</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Technologies</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Success</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">About</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Insights</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Career</a>
+            </li>
+            <li class="navItem">
+              <a href="#" class="navLink">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="languageDropdown">
+          <div class="languageDropdownTrigger">
+            Global (EN)
+            <span class="dropdownArrow open"></span>
+          </div>
+        </div>
+      </header>
+      <main class="main"></main>
+      <footer class="footer"></footer>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

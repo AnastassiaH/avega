@@ -1,0 +1,11 @@
+@import "./src/styles/reset.css";
+@import "./src/styles/header.scss";
+
+body {
+  font-family: "Prompt", Arial, Helvetica, sans-serif;
+  color: var(--secondary-color);
+}
+
+.hidden {
+  display: none;
+}
