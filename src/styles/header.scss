@@ -1,10 +1,10 @@
 .header {
   display: flex;
   align-items: center;
-  max-width: 1200px;
+  width: var(--max-width);
   height: 51px;
-  margin: 20px auto 15px;
-  padding-bottom: 10px;
+  margin: 20px 0 15px;
+  padding: 0 84px 10px;
   gap: 40px;
   border-bottom: 1px solid #dddddd;
 }

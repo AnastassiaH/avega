@@ -1,6 +1,9 @@
 :root {
   --primary-color: #5646cc;
   --secondary-color: #1e1e1e;
+  --white-color: #ffffff;
   --font-size: 16px;
   --spacing-unit: 8px;
+  --width: 1200px;
+  --max-width: calc(1200px + 84px * 2);
 }
