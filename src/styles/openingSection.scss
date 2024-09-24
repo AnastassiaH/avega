@@ -1,12 +1,15 @@
 .openingSection {
-  height: calc(100vh - 71px - 96px);
-  width: var(--max-width);
+  height: calc(100vh - 71px);
   margin: 0 auto;
-  padding: 0 84px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: no-repeat bottom -40px right 84px url(../assets/images/background-main.svg);
+}
+
+.breadcrumbs {
+  max-width: var(--width);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .breadcrumbItem {
@@ -22,6 +25,14 @@
 }
 
 .openingContentContainer {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  max-width: var(--width);
+  width: 100%;
+  margin: 0 auto;
+  background: no-repeat center right
+    url(../assets/images/background-main.svg);
 }
 
 .openingContent {
