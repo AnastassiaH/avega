@@ -10,32 +10,35 @@ const servicesSliderNextButton = document.querySelector(
 const servicesSlideAll = document.querySelectorAll(".servicesSlide");
 const servicesSlideCount = document.querySelector(".servicesSlideCount");
 
-const checkServicesSliderButtons = () => {
-  servicesSliderPrevButton.disabled =
-    servicesSlideAll[0].classList.contains("active");
-  servicesSliderNextButton.disabled =
-    servicesSlideAll[servicesSlideAll.length - 1].classList.contains("active");
+const checkSliderButtonsDisability = (prev, next, collection) => {
+  prev.disabled = collection[0].classList.contains("active");
+  next.disabled =
+    collection[collection.length - 1].classList.contains("active");
 };
 
-const handleActiveSlideClass = (element) => {
-  servicesSlideAll.forEach((el) => {
+const handleActiveSlideClass = (collection, element) => {
+  collection.forEach((el) => {
     el.classList.remove("active");
   });
   element.classList.add("active");
 
-  checkServicesSliderButtons();
+  checkSliderButtonsDisability(
+    servicesSliderPrevButton,
+    servicesSliderNextButton,
+    servicesSlideAll
+  );
 };
 
 servicesSliderPrevButton.addEventListener("click", () => {
   servicesSlider.scrollLeft -= 590;
   const slideIndex = Math.ceil(servicesSlider.scrollLeft / 590) - 1;
   servicesSlideCount.textContent = slideIndex + 1;
-  handleActiveSlideClass(servicesSlideAll[slideIndex]);
+  handleActiveSlideClass(servicesSlideAll, servicesSlideAll[slideIndex]);
 });
 
 servicesSliderNextButton.addEventListener("click", () => {
   servicesSlider.scrollLeft += 590;
   const slideIndex = Math.ceil(servicesSlider.scrollLeft / 590) + 1;
   servicesSlideCount.textContent = slideIndex + 1;
-  handleActiveSlideClass(servicesSlideAll[slideIndex]);
+  handleActiveSlideClass(servicesSlideAll, servicesSlideAll[slideIndex]);
 });
