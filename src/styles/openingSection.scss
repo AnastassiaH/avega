@@ -31,8 +31,7 @@
   max-width: var(--width);
   width: 100%;
   margin: 0 auto;
-  background: no-repeat center right
-    url(../assets/images/background-main.svg);
+  background: no-repeat center right url(../assets/images/background-main.svg);
 }
 
 .openingContent {
@@ -64,4 +63,12 @@
   height: 96px;
   width: 100%;
   background-color: var(--primary-color);
+}
+
+.companiesList {
+  display: flex;
+  height: 100%;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
 }
