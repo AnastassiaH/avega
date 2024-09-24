@@ -5,6 +5,7 @@
 @import "./src/styles/newsSection.scss";
 @import "./src/styles/workProcessSection.scss";
 @import "./src/styles/servicesSection.scss";
+@import "./src/styles/offersSection.scss";
 
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
