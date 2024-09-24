@@ -2,6 +2,7 @@
 @import "./src/styles/reset.css";
 @import "./src/styles/header.scss";
 @import "./src/styles/openingSection.scss";
+@import "./src/styles/newsSection.scss";
 
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
