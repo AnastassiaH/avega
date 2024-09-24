@@ -5,6 +5,13 @@
 
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.workProcessContainer {
+  max-width: var(--width);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .workProcessTitle {
