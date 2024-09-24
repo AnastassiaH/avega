@@ -47,6 +47,19 @@ body {
   background-size: cover;
 }
 
+.sectionHeader {
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 110%;
+  margin-bottom: 15px;
+}
+
+.sectionDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+}
+
 .hidden {
   display: none;
 }
