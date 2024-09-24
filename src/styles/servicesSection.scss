@@ -1,6 +1,84 @@
 .servicesSection {
-  padding: 80px 84px 0px;
+  padding-top: 80px;
   max-width: var(--width);
   width: 100%;
   margin: 0 auto;
+  background: no-repeat bottom right
+      url(../assets/images/Mykhailo-Romanchenko.png),
+    no-repeat bottom right url(../assets/images/mans-background.svg);
+  background-size: 40%;
+}
+
+.servicesTitle {
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 110%;
+  margin-bottom: 15px;
+}
+
+.servicesDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  width: 60%;
+  margin-bottom: 40px;
+}
+
+.servicesSlider {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 590px;
+}
+
+.servicesSlide {
+  width: 590px;
+  flex-shrink: 0;
+}
+
+.servicesSlideTitle {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.servicesSlideText {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+
+.servicesSliderContainer {
+  padding-bottom: 51px;
+}
+
+.servicesSliderControls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.prevArrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: no-repeat center url(../assets/icons/left-arrow-icon.svg);
+}
+
+.nextArrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: no-repeat center url(../assets/icons/right-arrow-icon.svg);
+}
+
+.prevArrow:disabled,
+.nextArrow:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
