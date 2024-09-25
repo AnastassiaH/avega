@@ -8,6 +8,8 @@
 @import "./src/styles/offersSection.scss";
 @import "./src/styles/technologiesSection.scss";
 @import "./src/styles/partnershipSection.scss";
+@import "./src/styles/blogSection.scss";
+
 
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
