@@ -15,43 +15,80 @@ const checkSliderButtonsDisability = (prev, next, collection) => {
   next.disabled =
     collection[collection.length - 1].classList.contains("active");
 };
-
 const handleActiveSlideClass = (collection, element) => {
   collection.forEach((el) => {
     el.classList.remove("active");
   });
   element.classList.add("active");
+};
 
+const serviceSlideWidth = 590;
+servicesSliderPrevButton.addEventListener("click", () => {
+  servicesSlider.scrollLeft -= serviceSlideWidth;
+  const slideIndex =
+    Math.ceil(servicesSlider.scrollLeft / serviceSlideWidth) - 1;
+  servicesSlideCount.textContent = slideIndex + 1;
+  handleActiveSlideClass(servicesSlideAll, servicesSlideAll[slideIndex]);
   checkSliderButtonsDisability(
     servicesSliderPrevButton,
     servicesSliderNextButton,
     servicesSlideAll
   );
-};
-
-servicesSliderPrevButton.addEventListener("click", () => {
-  servicesSlider.scrollLeft -= 590;
-  const slideIndex = Math.ceil(servicesSlider.scrollLeft / 590) - 1;
-  servicesSlideCount.textContent = slideIndex + 1;
-  handleActiveSlideClass(servicesSlideAll, servicesSlideAll[slideIndex]);
 });
-
 servicesSliderNextButton.addEventListener("click", () => {
-  servicesSlider.scrollLeft += 590;
-  const slideIndex = Math.ceil(servicesSlider.scrollLeft / 590) + 1;
+  servicesSlider.scrollLeft += serviceSlideWidth;
+  const slideIndex =
+    Math.ceil(servicesSlider.scrollLeft / serviceSlideWidth) + 1;
   servicesSlideCount.textContent = slideIndex + 1;
   handleActiveSlideClass(servicesSlideAll, servicesSlideAll[slideIndex]);
+  checkSliderButtonsDisability(
+    servicesSliderPrevButton,
+    servicesSliderNextButton,
+    servicesSlideAll
+  );
 });
 
 const technologiesList = document.querySelector(".technologiesList");
 const technologiesItemAll = document.querySelectorAll(".technologiesItem");
 const technologiesInfoList = document.querySelector(".technologiesInfoList");
+const technologiesItemWidth = 1224;
 
 technologiesList.addEventListener("click", (event) => {
   const technology = event.target;
   const technologyIndex = [...technologiesItemAll].findIndex(
     (elem) => elem === technology
   );
-  technologiesInfoList.scrollLeft = 1224 * technologyIndex;
+  technologiesInfoList.scrollLeft = technologiesItemWidth * technologyIndex;
   handleActiveSlideClass(technologiesItemAll, technology);
+});
+
+const blogList = document.querySelector(".blogList");
+const blogItemAll = document.querySelectorAll(".blogItem");
+const blogSliderPrevButton = document.querySelector(".blogSliderPrevButton");
+const blogSliderNextButton = document.querySelector(".blogSliderNextButton");
+const blogSlideCount = document.querySelector(".blogSlideCount");
+const blogItemWidth = 1224;
+
+blogSliderNextButton.addEventListener("click", () => {
+  blogList.scrollLeft += blogItemWidth;
+  const slideIndex = Math.ceil(blogList.scrollLeft / blogItemWidth) + 1;
+  blogSlideCount.textContent = slideIndex + 1;
+  handleActiveSlideClass(blogItemAll, blogItemAll[slideIndex]);
+  checkSliderButtonsDisability(
+    blogSliderPrevButton,
+    blogSliderNextButton,
+    blogItemAll
+  );
+});
+
+blogSliderPrevButton.addEventListener("click", () => {
+  blogList.scrollLeft -= blogItemWidth;
+  const slideIndex = Math.ceil(blogList.scrollLeft / blogItemWidth) - 1;
+  blogSlideCount.textContent = slideIndex + 1;
+  handleActiveSlideClass(blogItemAll, blogItemAll[slideIndex]);
+  checkSliderButtonsDisability(
+    blogSliderPrevButton,
+    blogSliderNextButton,
+    blogItemAll
+  );
 });
