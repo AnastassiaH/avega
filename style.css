@@ -9,6 +9,7 @@
 @import "./src/styles/technologiesSection.scss";
 @import "./src/styles/partnershipSection.scss";
 @import "./src/styles/blogSection.scss";
+@import "./src/styles/reviewsSection.scss";
 
 
 body {

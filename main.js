@@ -92,3 +92,38 @@ blogSliderPrevButton.addEventListener("click", () => {
     blogItemAll
   );
 });
+
+const reviewsSlider = document.querySelector(".reviewsSlider");
+const reviewsItemAll = document.querySelectorAll(".reviewsItem");
+const reviewSliderPrevButton = document.querySelector(
+  ".reviewSliderPrevButton"
+);
+const reviewSliderNextButton = document.querySelector(
+  ".reviewSliderNextButton"
+);
+const reviewsSlideCount = document.querySelector(".reviewsSlideCount");
+const reviewItemWidth = 1224;
+
+reviewSliderNextButton.addEventListener("click", () => {
+  reviewsSlider.scrollLeft += reviewItemWidth;
+  const slideIndex = Math.ceil(reviewsSlider.scrollLeft / reviewItemWidth) + 1;
+  reviewsSlideCount.textContent = slideIndex + 1;
+  handleActiveSlideClass(reviewsItemAll, reviewsItemAll[slideIndex]);
+  checkSliderButtonsDisability(
+    reviewSliderPrevButton,
+    reviewSliderNextButton,
+    reviewsItemAll
+  );
+});
+
+reviewSliderPrevButton.addEventListener("click", () => {
+  reviewsSlider.scrollLeft -= reviewItemWidth;
+  const slideIndex = Math.ceil(reviewsSlider.scrollLeft / reviewItemWidth) - 1;
+  reviewsSlideCount.textContent = slideIndex + 1;
+  handleActiveSlideClass(reviewsItemAll, reviewsItemAll[slideIndex]);
+  checkSliderButtonsDisability(
+    reviewSliderPrevButton,
+    reviewSliderNextButton,
+    reviewsItemAll
+  );
+});
