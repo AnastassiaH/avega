@@ -13,6 +13,7 @@
   display: flex;
   width: 100%;
   gap: 17px;
+  margin-bottom: 50px;
 }
 
 .technologiesItem {
@@ -24,5 +25,74 @@
 }
 
 .technologiesItem.active {
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.technologiesInfoList {
+  display: flex;
+  overflow: hidden;
+}
+
+.technologiesInfoItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-shrink: 0;
+  margin-right: 24px;
+}
+
+.statsContainer {
+  display: flex;
+  gap: 20px;
+  width: calc(255px * 2 + 20px);
+}
+
+.technologiesInfoItemPart {
+  width: 50%;
+}
+
+.statsBlock {
+  flex: 1 0 255px;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.technologiesItemText {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.technologiesItemLink {
+  background-color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+  padding: 18px 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  color: var(--white-color);
+  width: 185px;
+  text-decoration: none;
+}
+
+.statsBlockNumber {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 110%;
+  margin-bottom: 8px;
+}
+
+.statsBlockText {
+  font-size: 15px;
+  line-height: 125%;
 }

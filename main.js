@@ -42,3 +42,16 @@ servicesSliderNextButton.addEventListener("click", () => {
   servicesSlideCount.textContent = slideIndex + 1;
   handleActiveSlideClass(servicesSlideAll, servicesSlideAll[slideIndex]);
 });
+
+const technologiesList = document.querySelector(".technologiesList");
+const technologiesItemAll = document.querySelectorAll(".technologiesItem");
+const technologiesInfoList = document.querySelector(".technologiesInfoList");
+
+technologiesList.addEventListener("click", (event) => {
+  const technology = event.target;
+  const technologyIndex = [...technologiesItemAll].findIndex(
+    (elem) => elem === technology
+  );
+  technologiesInfoList.scrollLeft = 1224 * technologyIndex;
+  handleActiveSlideClass(technologiesItemAll, technology);
+});
