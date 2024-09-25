@@ -7,6 +7,7 @@
 @import "./src/styles/servicesSection.scss";
 @import "./src/styles/offersSection.scss";
 @import "./src/styles/technologiesSection.scss";
+@import "./src/styles/partnershipSection.scss";
 
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;

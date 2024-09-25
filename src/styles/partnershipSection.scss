@@ -1,0 +1,35 @@
+.partnershipSection {
+  background-color: var(--primary-color);
+}
+
+.partnersContent {
+  max-width: var(--width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.partnershipHeader.sectionHeader {
+  color: var(--white-color);
+  margin-bottom: 30px;
+}
+
+.partnersContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.partnersItem {
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 120px;
+  width: calc((100% - 4 * 20px) / 5);
+}
+
+@for $i from 1 through 5 {
+  .partnersItem:nth-child(#{$i}) {
+    background-image: url(../assets/icons/partner-icon-#{$i}.svg);
+  }
+}
