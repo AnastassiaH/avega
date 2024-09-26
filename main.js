@@ -1,5 +1,26 @@
 import "./style.css";
 
+const languageDropdownTrigger = document.querySelector(
+  ".languageDropdownTrigger"
+);
+const dropdownArrow = document.querySelector(".dropdownArrow");
+const languageList = document.querySelector(".languageList");
+languageDropdownTrigger.addEventListener("click", () => {
+  languageList.classList.toggle("open");
+  dropdownArrow.classList.toggle("open");
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    languageList.classList.contains("open") &&
+    event.target !== languageDropdownTrigger &&
+    event.target !== dropdownArrow
+  ) {
+    languageList.classList.remove("open");
+    dropdownArrow.classList.remove("open");
+  }
+});
+
 const servicesSlider = document.querySelector(".servicesSlider");
 const servicesSliderPrevButton = document.querySelector(
   ".servicesSliderPrevButton"
