@@ -148,3 +148,14 @@ reviewSliderPrevButton.addEventListener("click", () => {
     reviewsItemAll
   );
 });
+
+const faqCardAll = document.querySelectorAll(".faqCard");
+const questionTriggerAll = document.querySelectorAll(".questionTrigger");
+const answerAll = document.querySelectorAll(".answer");
+
+questionTriggerAll.forEach((trigger, index) => {
+  trigger.addEventListener("click", () => {
+    answerAll[index].classList.add("open");
+    console.log("click nahuy");
+  });
+});

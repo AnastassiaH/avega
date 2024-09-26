@@ -10,6 +10,7 @@
 @import "./src/styles/partnershipSection.scss";
 @import "./src/styles/blogSection.scss";
 @import "./src/styles/reviewsSection.scss";
+@import "./src/styles/faqSection.scss";
 
 
 body {
