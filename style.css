@@ -16,7 +16,7 @@
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
   color: var(--secondary-color);
-  background-color: car(--white-color);
+  background-color: var(--white-color);
 }
 
 .page {

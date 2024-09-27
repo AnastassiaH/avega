@@ -151,11 +151,32 @@ reviewSliderPrevButton.addEventListener("click", () => {
 
 const faqCardAll = document.querySelectorAll(".faqCard");
 const questionTriggerAll = document.querySelectorAll(".questionTrigger");
-const answerAll = document.querySelectorAll(".answer");
+const faqSectionContent = document.querySelector(".faqSectionContent");
 
 questionTriggerAll.forEach((trigger, index) => {
   trigger.addEventListener("click", () => {
-    answerAll[index].classList.add("open");
-    console.log("click nahuy");
+    faqCardAll.forEach((card, idx, array) => {
+      if (card.classList.contains("open") && index === idx) {
+        card.classList.remove("open");
+        if (array[index + 2]) {
+          array[index + 2].style.marginTop = "0px";
+        }
+        faqSectionContent.style.paddingBottom = "80px";
+        return;
+      }
+      if (index === idx) {
+        card.classList.toggle("open");
+        if (array[index + 2]) {
+          array[index + 2].style.marginTop = "100px";
+          faqSectionContent.style.paddingBottom = "80px";
+          return;
+        } else {
+          faqSectionContent.style.paddingBottom = "180px";
+        }
+        return;
+      } else {
+        card.classList.remove("open");
+      }
+    });
   });
 });
