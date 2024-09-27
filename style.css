@@ -13,8 +13,7 @@
 @import "./src/styles/FAQSection.scss";
 @import "./src/styles/feedbackSection.scss";
 @import "./src/styles/footer.scss";
-
-
+@import "./src/styles/media.scss";
 
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
@@ -26,10 +25,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .main {
   width: 100%;
+}
+
+.sectionContent {
+  max-width: var(--width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
 .appButton {

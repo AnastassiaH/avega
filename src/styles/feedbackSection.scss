@@ -1,13 +1,8 @@
 .feedbackSection {
-  width: 100%;
   background-color: var(--primary-color-light);
 }
 
 .feedbackSectionContent {
-  max-width: var(--max-width);
-  padding: 80px 84px;
-  margin: 0 auto;
-
   display: flex;
   justify-content: center;
   flex-direction: column;
