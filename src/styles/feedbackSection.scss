@@ -1,0 +1,68 @@
+.feedbackSection {
+  width: 100%;
+  background-color: var(--primary-color-light);
+}
+
+.feedbackSectionContent {
+  max-width: var(--max-width);
+  padding: 80px 84px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedbackHeaderText {
+  font-size: 22px;
+  line-height: 125%;
+  margin-bottom: 30px;
+}
+
+.feedbackForm {
+  width: 590px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedbackInput {
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  background-color: var(--white-color);
+  padding-left: 20px;
+  border: none;
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.feedbackCheckboxLabel {
+  font-size: 15px;
+  color: rgba(#1e1e1e, 0.6);
+  margin-bottom: 15px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkboxStar {
+  margin-left: -7px;
+}
+
+.feedbackCheckbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--white-color);
+}
+
+.feedbackSubmitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

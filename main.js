@@ -180,3 +180,8 @@ questionTriggerAll.forEach((trigger, index) => {
     });
   });
 });
+
+const feedbackSubmitButton = document.querySelector(".feedbackSubmitButton");
+feedbackSubmitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+});
