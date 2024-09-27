@@ -12,6 +12,8 @@
 @import "./src/styles/reviewsSection.scss";
 @import "./src/styles/FAQSection.scss";
 @import "./src/styles/feedbackSection.scss";
+@import "./src/styles/footer.scss";
+
 
 
 body {
