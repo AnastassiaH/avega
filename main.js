@@ -1,5 +1,7 @@
 import "./style.css";
 
+// header
+
 const languageDropdownTrigger = document.querySelector(
   ".languageDropdownTrigger"
 );
@@ -20,6 +22,8 @@ document.addEventListener("click", (event) => {
     dropdownArrow.classList.remove("open");
   }
 });
+
+// services section
 
 const servicesSlider = document.querySelector(".servicesSlider");
 const servicesSliderPrevButton = document.querySelector(
@@ -69,6 +73,8 @@ servicesSliderNextButton.addEventListener("click", () => {
   );
 });
 
+// technologies section
+
 const technologiesList = document.querySelector(".technologiesList");
 const technologiesItemAll = document.querySelectorAll(".technologiesItem");
 const technologiesInfoList = document.querySelector(".technologiesInfoList");
@@ -82,6 +88,8 @@ technologiesList.addEventListener("click", (event) => {
   technologiesInfoList.scrollLeft = technologiesItemWidth * technologyIndex;
   handleActiveSlideClass(technologiesItemAll, technology);
 });
+
+// blog section
 
 const blogList = document.querySelector(".blogList");
 const blogItemAll = document.querySelectorAll(".blogItem");
@@ -113,6 +121,8 @@ blogSliderPrevButton.addEventListener("click", () => {
     blogItemAll
   );
 });
+
+// review section
 
 const reviewsSlider = document.querySelector(".reviewsSlider");
 const reviewsItemAll = document.querySelectorAll(".reviewsItem");
@@ -149,29 +159,31 @@ reviewSliderPrevButton.addEventListener("click", () => {
   );
 });
 
-const faqCardAll = document.querySelectorAll(".faqCard");
+// FAQ section
+
+const FAQCardAll = document.querySelectorAll(".FAQCard");
 const questionTriggerAll = document.querySelectorAll(".questionTrigger");
-const faqSectionContent = document.querySelector(".faqSectionContent");
+const FAQSectionContent = document.querySelector(".FAQSectionContent");
 
 questionTriggerAll.forEach((trigger, index) => {
   trigger.addEventListener("click", () => {
-    faqCardAll.forEach((card, idx, array) => {
+    FAQCardAll.forEach((card, idx, array) => {
       if (card.classList.contains("open") && index === idx) {
         card.classList.remove("open");
         if (array[index + 2]) {
           array[index + 2].style.marginTop = "0px";
         }
-        faqSectionContent.style.paddingBottom = "80px";
+        FAQSectionContent.style.paddingBottom = "80px";
         return;
       }
       if (index === idx) {
         card.classList.toggle("open");
         if (array[index + 2]) {
           array[index + 2].style.marginTop = "100px";
-          faqSectionContent.style.paddingBottom = "80px";
+          FAQSectionContent.style.paddingBottom = "80px";
           return;
         } else {
-          faqSectionContent.style.paddingBottom = "180px";
+          FAQSectionContent.style.paddingBottom = "180px";
         }
         return;
       } else {
@@ -180,6 +192,8 @@ questionTriggerAll.forEach((trigger, index) => {
     });
   });
 });
+
+// feedback section
 
 const feedbackSubmitButton = document.querySelector(".feedbackSubmitButton");
 feedbackSubmitButton.addEventListener("click", (event) => {

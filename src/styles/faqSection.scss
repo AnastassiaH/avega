@@ -1,25 +1,25 @@
-.faqSection {
+.FAQSection {
   width: 100%;
   background-color: var(--white-color);
 }
 
-.faqSectionContent {
+.FAQSectionContent {
   max-width: var(--max-width);
   padding: 80px 84px;
   margin: 0 auto;
 }
 
-.faqHeader.sectionHeader {
+.FAQHeader.sectionHeader {
   margin-bottom: 30px;
 }
 
-.faqsContainer {
+.FAQsContainer {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.faqCard {
+.FAQCard {
   flex: 1 0 calc((100% - 20px) / 2);
   border-radius: 20px;
   background-color: var(--primary-color-light);
