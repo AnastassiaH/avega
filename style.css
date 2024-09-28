@@ -13,7 +13,6 @@
 @import "./src/styles/FAQSection.scss";
 @import "./src/styles/feedbackSection.scss";
 @import "./src/styles/footer.scss";
-@import "./src/styles/media.scss";
 
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
@@ -79,4 +78,230 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 1224px) {
+  .header {
+    width: calc(100% - var(--media-md-padding-inline) * 2);
+    margin: 20px 0 15px;
+    gap: 24px;
+  }
+
+  .languageGlobal {
+    display: none;
+  }
+
+  .breadcrumbs,
+  .openingContentContainer,
+  .sectionContent {
+    width: calc(100% - var(--media-md-padding-inline) * 2);
+  }
+
+  .openingContentContainer {
+    background-size: 50%;
+  }
+
+  .servicesSection {
+    padding-inline: 24px;
+    background-position-x: calc(100% - var(--media-md-padding-inline));
+  }
+
+  .offersSection {
+    padding: 0;
+  }
+
+  .technologiesInfoItem {
+    width: calc(100% - 24px);
+  }
+
+  .blogList {
+    width: 100%;
+  }
+
+  .blogItem,
+  .footerContent,
+  .reviewsItem,
+  .reviewsSlider,
+  .footer {
+    width: 100%;
+  }
+
+  .statsBlockNumber {
+    font-size: 42px;
+  }
+
+  .FAQCard {
+    min-height: 138px;
+  }
+
+  .question {
+    gap: 20px;
+  }
+
+  .footer {
+    padding-inline: var(--media-md-padding-inline);
+  }
+}
+
+@media (max-width: 1056px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .languageGlobal {
+    display: block;
+  }
+
+  .openingSection {
+    height: calc(100vh - 131px);
+  }
+
+  .header .nav {
+    order: 3;
+  }
+
+  .navList {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .companiesList {
+    gap: 40px;
+  }
+
+  .workProcessSection {
+    padding-inline: 24px;
+  }
+
+  .statsContainer {
+    width: unset;
+  }
+
+  .statsBlock {
+    flex: 1 0 calc((100% - 20px) / 2);
+    max-width: 255px;
+  }
+
+  .feedbackHeader {
+    text-align: center;
+  }
+}
+
+@media (max-width: 956px) {
+  .footer .nav {
+    order: 3;
+  }
+
+  .footerBottom {
+    width: max-content;
+  }
+
+  .servicesDescription,
+  .offersDescription,
+  .reviewDescription {
+    width: 80%;
+  }
+
+  .statsBlock {
+    padding: 25px;
+  }
+
+  .statsBlockNumber {
+    font-size: 32px;
+  }
+
+  .statsBlockText {
+    font-size: 12px;
+  }
+
+  .technologiesInfoItemPart {
+    width: 65%;
+  }
+
+  .technologiesItemText {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  .sectionHeader {
+    font-size: 40px;
+  }
+
+  .openingHeader {
+    width: 70%;
+  }
+
+  .openingContent {
+    width: 100%;
+  }
+
+  .openingText {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  .companiesList {
+  }
+
+  .companiesItem {
+    display: flex;
+    justify-content: center;
+  }
+
+  .workProcessText {
+    width: 65%;
+  }
+
+  .newsContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .newsCard {
+    width: 60%;
+    height: unset;
+  }
+
+  .stepCardsContainer {
+    gap: 20px;
+  }
+
+  .stepCard {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .FAQCard {
+    min-height: 180px;
+  }
+
+  .offerCard {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .technologiesItem {
+    font-size: 15px;
+  }
+
+  .blogItem {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blogCard {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .feedbackForm {
+    width: 425px;
+  }
+
+  .feedbackCheckboxLabel {
+    font-size: 12px;
+  }
 }

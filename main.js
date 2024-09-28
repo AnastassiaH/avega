@@ -78,14 +78,16 @@ servicesSliderNextButton.addEventListener("click", () => {
 const technologiesList = document.querySelector(".technologiesList");
 const technologiesItemAll = document.querySelectorAll(".technologiesItem");
 const technologiesInfoList = document.querySelector(".technologiesInfoList");
-const technologiesItemWidth = 1224;
+const technologiesInfoItem = document.querySelector(".technologiesInfoItem");
+const technologiesInfoItemWidth = technologiesInfoItem.clientWidth;
 
 technologiesList.addEventListener("click", (event) => {
   const technology = event.target;
   const technologyIndex = [...technologiesItemAll].findIndex(
     (elem) => elem === technology
   );
-  technologiesInfoList.scrollLeft = technologiesItemWidth * technologyIndex;
+  technologiesInfoList.scrollLeft =
+    (technologiesInfoItemWidth + 48) * technologyIndex;
   handleActiveSlideClass(technologiesItemAll, technology);
 });
 
@@ -96,7 +98,8 @@ const blogItemAll = document.querySelectorAll(".blogItem");
 const blogSliderPrevButton = document.querySelector(".blogSliderPrevButton");
 const blogSliderNextButton = document.querySelector(".blogSliderNextButton");
 const blogSlideCount = document.querySelector(".blogSlideCount");
-const blogItemWidth = 1224;
+const blogItemWidth = blogItemAll[0].clientWidth + 24;
+console.log(blogItemWidth);
 
 blogSliderNextButton.addEventListener("click", () => {
   blogList.scrollLeft += blogItemWidth;
