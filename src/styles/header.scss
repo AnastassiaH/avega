@@ -10,6 +10,15 @@
   border-bottom: 1px solid #dddddd;
 }
 
+.navTrigger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background-image: url(../assets/icons/burger-menu.svg);
+  background-size: cover;
+}
+
 .logoSearchContainer {
   display: flex;
   gap: 20px;
@@ -58,7 +67,7 @@
 .languageList {
   opacity: 0;
   transform: translateY(-20px);
-  padding: 8px 15px 0;
+  padding: 8px 10px 0;
   background-color: var(--white-color);
   transition: all 0.2s;
 
@@ -78,6 +87,7 @@
   width: max-content;
   top: 240%;
   right: 0;
+  font-size: 14px;
 }
 
 .languageValue {

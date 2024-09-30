@@ -47,7 +47,7 @@ const handleActiveSlideClass = (collection, element) => {
   element.classList.add("active");
 };
 
-const serviceSlideWidth = 590;
+const serviceSlideWidth = servicesSlideAll[0].clientWidth;
 servicesSliderPrevButton.addEventListener("click", () => {
   servicesSlider.scrollLeft -= serviceSlideWidth;
   const slideIndex =
@@ -99,7 +99,6 @@ const blogSliderPrevButton = document.querySelector(".blogSliderPrevButton");
 const blogSliderNextButton = document.querySelector(".blogSliderNextButton");
 const blogSlideCount = document.querySelector(".blogSlideCount");
 const blogItemWidth = blogItemAll[0].clientWidth + 24;
-console.log(blogItemWidth);
 
 blogSliderNextButton.addEventListener("click", () => {
   blogList.scrollLeft += blogItemWidth;

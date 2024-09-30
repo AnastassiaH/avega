@@ -204,11 +204,12 @@ body {
   }
 
   .statsBlock {
-    padding: 25px;
+    padding: 15px;
   }
 
   .statsBlockNumber {
     font-size: 32px;
+    text-align: center;
   }
 
   .statsBlockText {
@@ -243,6 +244,7 @@ body {
   }
 
   .companiesList {
+    gap: 15px;
   }
 
   .companiesItem {
@@ -254,6 +256,14 @@ body {
     width: 65%;
   }
 
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardText {
+    font-size: 14px;
+  }
+
   .newsContent {
     flex-direction: column;
     justify-content: center;
@@ -262,8 +272,14 @@ body {
   }
 
   .newsCard {
-    width: 60%;
+    width: 100%;
     height: unset;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .newsImage {
+    margin-bottom: 0;
   }
 
   .stepCardsContainer {
@@ -274,16 +290,49 @@ body {
     flex-basis: calc((100% - 20px) / 2);
   }
 
-  .FAQCard {
-    min-height: 180px;
+  .servicesSection {
+    background-size: 45%;
+  }
+
+  .servicesSlider,
+  .servicesSlide {
+    width: 340px;
   }
 
   .offerCard {
     flex-basis: calc((100% - 20px) / 2);
   }
 
+  .technologiesInfoItemPart {
+    width: 45%;
+  }
+
   .technologiesItem {
     font-size: 15px;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .statsBlock {
+    min-width: 255px;
+  }
+
+  .partnersContainer {
+    justify-content: center;
+  }
+
+  .blogHeader {
+    align-self: flex-start;
+  }
+
+  .blogContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .blogItem {
@@ -293,15 +342,372 @@ body {
   }
 
   .blogCard {
-    width: 100%;
+    width: calc(100vw - var(--media-md-padding-inline) * 2);
     flex-basis: 100%;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .blogImage {
+    margin-bottom: 0;
+    width: 55%;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+
+  .blogTitle {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .blogText {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .reviewTitle {
+    font-size: 16px;
+  }
+
+  .reviewText {
+    font-size: 13px;
+  }
+
+  .FAQCard {
+    min-height: 180px;
+  }
+
+  .question {
+    font-size: 16px;
   }
 
   .feedbackForm {
     width: 425px;
   }
 
+  .feedbackInput {
+    height: 50px;
+  }
+
   .feedbackCheckboxLabel {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 756px) {
+  .logoSearchContainer,
+  .languageDropdown {
+    position: relative;
+    z-index: 101;
+  }
+
+  .header {
+    row-gap: 0px;
+  }
+
+  .openingSection {
+    height: calc(100vh - 86px);
+  }
+
+  .navTrigger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navTrigger.close {
+    background: no-repeat center url(./src/assets/icons/menu-close.svg);
+  }
+
+  .nav {
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: unset;
+    transition: all 0.6s;
+    opacity: 0;
+    transform: translateY(-100%);
+    top: 71px;
+  }
+
+  .navTrigger.close {
+    display: none;
+  }
+
+  .nav:target {
+    display: flex;
+    transform: translateY(0%);
+    background-color: var(--white-color);
+    height: calc(100% - 96px - 71px);
+    bottom: 96px;
+    z-index: 100;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  .nav:target + .languageDropdown .navTrigger.open {
+    display: none;
+  }
+
+  .nav:target + .languageDropdown .navTrigger.close {
+    display: block;
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .languageDropdown {
+    display: flex;
+    gap: 30px;
+  }
+
+  .languagesOptions {
+    right: 60px;
+    top: 140%;
+  }
+
+  .companiesList,
+  .partnersContainer {
+    flex-wrap: wrap;
+    height: max-content;
+    padding: 15px 0;
+  }
+
+  .companiesItem {
+    flex: 1 0 calc((100% - 15px) / 2);
+  }
+
+  .partnersItem {
+    flex: 1 0 calc((100% - 40px) / 3);
+  }
+
+  .newsSection {
+    margin-top: 144px;
+  }
+
+  .newsImage {
+    width: 45%;
+    object-fit: contain;
+    font-size: 12px;
+  }
+
+  .newsCategory {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .newsTitle {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .newsText {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .newsLink {
+    font-size: 12px;
+  }
+
+  .blogImage {
+    width: 40%;
+  }
+
+  .technologiesList {
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .technologiesItem {
+    font-size: 13px;
+  }
+
+  .partnersItem:nth-child(2) {
+    background-image: url(/src/assets/icons/partner-icon-5.svg);
+  }
+
+  .partnersItem:nth-child(5) {
+    background-image: url(/src/assets/icons/partner-icon-2.svg);
+  }
+
+  .footerContent {
+    gap: 15px;
+    flex-wrap: nowrap;
+  }
+
+  .footerContent img {
+    width: 90%;
+  }
+
+  .footerBottom {
+    flex-shrink: 0;
+  }
+
+  .footer .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .openingHeader {
+    width: 100%;
+    font-size: 28px;
+  }
+
+  .appButton {
+    padding: 12px 18px;
+    justify-content: center;
+  }
+
+  .newsCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsImage,
+  .newsCardInfo {
+    width: 75%;
+  }
+
+  .stepCard {
+    flex-basis: 75%;
+  }
+
+  .stepCard:nth-child(2) {
+    order: 3;
+  }
+
+  .stepCard:nth-child(3) {
+    order: 5;
+  }
+
+  .stepCard:nth-child(4) {
+    order: 7;
+    max-width: 75%;
+    margin-right: auto;
+  }
+
+  .termCard {
+    flex: 1 0 calc(25% - 20px);
+    order: 2;
+    margin-top: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+  }
+
+  .termCard:nth-last-child(2) {
+    order: 4;
+  }
+
+  .termCard:last-child {
+    order: 6;
+  }
+
+  .squareFigure {
+    border: 2px solid var(--primary-color);
+    border-left: transparent;
+    width: 20px;
+
+    position: absolute;
+    top: 5%;
+    left: -20px;
+    height: 220%;
+  }
+
+  .termValue {
+    padding: 10px 15px;
+    height: 40px;
+    margin: 0 0 -12% 20px;
+    text-align: center;
+    border-radius: 25px;
+
+    text-wrap: wrap;
+    word-wrap: break-word;
+    width: 100%;
+    height: max-content;
+  }
+
+  .offersCardsContainer {
+    justify-content: center;
+  }
+
+  .offerCard {
+    flex: 1 0 75%;
+    margin: 0 10%;
+  }
+
+  .technologiesSliderContainer {
+    display: flex;
+    gap: 25px;
+  }
+
+  .technologiesList {
+    flex: 1 0 20%;
+    width: 30%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .technologiesInfoList {
+    flex: 1 0 80%;
+    width: 70%;
+  }
+
+  .technologiesInfoItem {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .technologiesInfoItemPart {
+    width: 100%;
+  }
+
+  .technologiesItemLink {
+    padding: 15px 25px;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .statsContainer {
+    flex-direction: row;
+  }
+
+  .statsBlock {
+    min-width: unset;
+    padding: 10px;
+  }
+
+  .statsBlockNumber {
+    font-size: 22px;
+  }
+
+  .blogCard {
+    flex-direction: column;
+  }
+
+  .blogCardInfo,
+  .blogImage {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .reviewsItem {
+    flex-direction: column;
+  }
+
+  .reviewCard {
+    width: 100%;
+  }
+
+  .FAQCard {
+    flex-basis: 100%;
+    min-height: unset;
   }
 }

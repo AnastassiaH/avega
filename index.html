@@ -20,7 +20,7 @@
           <img src="./src/assets/icons/logo-icon.svg" alt="Avenga logo" />
           <span class="searchIcon"></span>
         </div>
-        <nav class="nav">
+        <nav class="nav" id="nav">
           <ul class="navList">
             <li class="navItem">
               <a href="#" class="navLink">Home</a>
@@ -58,11 +58,13 @@
           </div>
           <div class="languagesOptions">
             <ul class="languageList">
-              <li class="languageValue">UA</li>
-              <li class="languageValue">ES</li>
-              <li class="languageValue">FR</li>
+              <li class="languageValue">Ukrainian (UA)</li>
+              <li class="languageValue">Spanish (ES)</li>
+              <li class="languageValue">French (FR)</li>
             </ul>
           </div>
+          <a href="#nav" class="navTrigger open"></a>
+          <a href="#" class="navTrigger close"></a>
         </div>
       </header>
       <main class="main">
@@ -126,13 +128,15 @@
                 src="./src/assets/images/news-image-1.png"
                 alt="news-image"
               />
-              <button class="newsButton">Financial services & banking</button>
-              <p class="newsTitle">Bespoke Cloud Architecture Design</p>
-              <p class="newsText">
-                Innovative cloud solutions that transform the case management
-                experience for teams.
-              </p>
-              <a href="" class="newsLink">Read more</a>
+              <div class="newsCardInfo">
+                <a href="" class="newsCategory">Financial services & banking</a>
+                <p class="newsTitle">Bespoke Cloud Architecture Design</p>
+                <p class="newsText">
+                  Innovative cloud solutions that transform the case management
+                  experience for teams.
+                </p>
+                <a href="" class="newsLink">Read more</a>
+              </div>
             </div>
             <div class="newsCard">
               <img
@@ -140,16 +144,18 @@
                 src="./src/assets/images/news-image-2.png"
                 alt="news-image"
               />
-              <button class="newsButton">ML & Al</button>
-              <p class="newsTitle">
-                Al assistant for increased productivity in the workplace
-              </p>
-              <p class="newsText">
-                Collaborating on a custom UMA platform enables a business to
-                evolve a traditional workspace into a smart, collaborative
-                environment.
-              </p>
-              <a href="" class="newsLink">Read more</a>
+              <div class="newsCardInfo">
+                <a href="" class="newsCategory">ML & Al</a>
+                <p class="newsTitle">
+                  Al assistant for increased productivity in the workplace
+                </p>
+                <p class="newsText">
+                  Collaborating on a custom UMA platform enables a business to
+                  evolve a traditional workspace into a smart, collaborative
+                  environment.
+                </p>
+                <a href="" class="newsLink">Read more</a>
+              </div>
             </div>
             <div class="newsCard">
               <img
@@ -157,15 +163,17 @@
                 src="./src/assets/images/news-image-3.png"
                 alt="news-image"
               />
-              <button class="newsButton">Technology</button>
-              <p class="newsTitle">
-                Intuitive SaaS purchasing management platform
-              </p>
-              <p class="newsText">
-                Transforming the purchasing experience by making the buying
-                process as automated and streamlined as possible.
-              </p>
-              <a href="" class="newsLink">Read more</a>
+              <div class="newsCardInfo">
+                <a href="" class="newsCategory">Technology</a>
+                <p class="newsTitle">
+                  Intuitive SaaS purchasing management platform
+                </p>
+                <p class="newsText">
+                  Transforming the purchasing experience by making the buying
+                  process as automated and streamlined as possible.
+                </p>
+                <a href="" class="newsLink">Read more</a>
+              </div>
             </div>
           </div>
         </section>
@@ -212,15 +220,15 @@
                 </div>
                 <div class="termCard">
                   <div class="squareFigure"></div>
-                  <div class="termValue">1 working day</div>
+                  <p class="termValue">1 working day</p>
                 </div>
                 <div class="termCard">
                   <div class="squareFigure"></div>
-                  <div class="termValue">up to 7 working days</div>
+                  <p class="termValue">up to 7 working days</p>
                 </div>
                 <div class="termCard">
                   <div class="squareFigure"></div>
-                  <div class="termValue">7+ working days</div>
+                  <p class="termValue">7+ working days</p>
                 </div>
               </div>
             </div>
@@ -559,7 +567,7 @@
           </div>
         </section>
         <section class="blogSection">
-          <div class="sectionContent">
+          <div class="sectionContent blogContent">
             <p class="sectionHeader blogHeader">Blog</p>
             <ul class="blogList">
               <li class="blogItem active">
@@ -569,20 +577,20 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">
-                    Avenga Contributes 1 Million Hryvnias for Okhmatdyt Hospital
-                    Reconstruction
-                  </p>
-                  <p class="blogText">
-                    Following the catastrophic missile attack on July 8, 2024,
-                    which inflicted significant damage on Ukraine’s largest
-                    children’s hospital, Okhmatdyt, Avenga has pledged a
-                    donation of 1,000,000 UAH to aid in the urgent rebuilding
-                    efforts.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">
+                      Avenga Contributes 1 Million Hryvnias for Okhmatdyt
+                      Hospital Reconstruction
+                    </p>
+                    <p class="blogText">
+                      Following the catastrophic missile attack on July 8, 2024,
+                      which inflicted significant damage on Ukraine’s largest
+                      children’s hospital, Okhmatdyt, Avenga has pledged a
+                      donation of 1,000,000 UAH to aid in the urgent rebuilding
+                      efforts.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
                 <div class="blogCard">
                   <img
@@ -590,19 +598,19 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">
-                    Conference Highlights: CollabDays, InfoShare, and MS Tech
-                    Summit
-                  </p>
-                  <p class="blogText">
-                    Catch up on the latest updates from the Microsoft 365 tech
-                    community, delve into the future of LLMs and AI Agents, and
-                    understand the implications of SharePoint Embedded’s general
-                    availability for enterprises.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">
+                      Conference Highlights: CollabDays, InfoShare, and MS Tech
+                      Summit
+                    </p>
+                    <p class="blogText">
+                      Catch up on the latest updates from the Microsoft 365 tech
+                      community, delve into the future of LLMs and AI Agents,
+                      and understand the implications of SharePoint Embedded’s
+                      general availability for enterprises.
+                    </p>
+                    <a href="" class="blogLink">Read more</a>
+                  </div>
                 </div>
                 <div class="blogCard">
                   <img
@@ -610,15 +618,15 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">AI’s Impact on the Banking Sector</p>
-                  <p class="blogText">
-                    Explore how artificial intelligence is revolutionizing the
-                    banking industry by modernizing financial services,
-                    enhancing customer experiences, and fostering innovation.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">AI’s Impact on the Banking Sector</p>
+                    <p class="blogText">
+                      Explore how artificial intelligence is revolutionizing the
+                      banking industry by modernizing financial services,
+                      enhancing customer experiences, and fostering innovation.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
               </li>
               <li class="blogItem">
@@ -628,19 +636,19 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">
-                    Conference Highlights: CollabDays, InfoShare, and MS Tech
-                    Summit
-                  </p>
-                  <p class="blogText">
-                    Catch up on the latest updates from the Microsoft 365 tech
-                    community, delve into the future of LLMs and AI Agents, and
-                    understand the implications of SharePoint Embedded’s general
-                    availability for enterprises.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">
+                      Conference Highlights: CollabDays, InfoShare, and MS Tech
+                      Summit
+                    </p>
+                    <p class="blogText">
+                      Catch up on the latest updates from the Microsoft 365 tech
+                      community, delve into the future of LLMs and AI Agents,
+                      and understand the implications of SharePoint Embedded’s
+                      general availability for enterprises.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
                 <div class="blogCard">
                   <img
@@ -648,15 +656,15 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">AI’s Impact on the Banking Sector</p>
-                  <p class="blogText">
-                    Explore how artificial intelligence is revolutionizing the
-                    banking industry by modernizing financial services,
-                    enhancing customer experiences, and fostering innovation.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">AI’s Impact on the Banking Sector</p>
+                    <p class="blogText">
+                      Explore how artificial intelligence is revolutionizing the
+                      banking industry by modernizing financial services,
+                      enhancing customer experiences, and fostering innovation.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
                 <div class="blogCard">
                   <img
@@ -664,17 +672,17 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">
-                    Custom App Development for Microsoft Teams
-                  </p>
-                  <p class="blogText">
-                    Uncover the potential of custom app development for
-                    Microsoft Teams and learn how to build tailored applications
-                    to enhance team functionality.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">
+                      Custom App Development for Microsoft Teams
+                    </p>
+                    <p class="blogText">
+                      Uncover the potential of custom app development for
+                      Microsoft Teams and learn how to build tailored
+                      applications to enhance team functionality.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
               </li>
               <li class="blogItem">
@@ -684,15 +692,15 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">AI’s Impact on the Banking Sector</p>
-                  <p class="blogText">
-                    Explore how artificial intelligence is revolutionizing the
-                    banking industry by modernizing financial services,
-                    enhancing customer experiences, and fostering innovation.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">AI’s Impact on the Banking Sector</p>
+                    <p class="blogText">
+                      Explore how artificial intelligence is revolutionizing the
+                      banking industry by modernizing financial services,
+                      enhancing customer experiences, and fostering innovation.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
                 <div class="blogCard">
                   <img
@@ -700,17 +708,17 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">
-                    Custom App Development for Microsoft Teams
-                  </p>
-                  <p class="blogText">
-                    Uncover the potential of custom app development for
-                    Microsoft Teams and learn how to build tailored applications
-                    to enhance team functionality.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">
+                      Custom App Development for Microsoft Teams
+                    </p>
+                    <p class="blogText">
+                      Uncover the potential of custom app development for
+                      Microsoft Teams and learn how to build tailored
+                      applications to enhance team functionality.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
                 <div class="blogCard">
                   <img
@@ -718,18 +726,18 @@
                     alt=""
                     class="blogImage"
                   />
-                  <p class="blogTitle">
-                    Avenga Appoints New CEO: Ludovic Gaudé Succeeds Yuriy
-                    Adamchuk
-                  </p>
-                  <p class="blogText">
-                    Avenga, a leading global engineering and consulting
-                    platform, has announced Ludovic Gaudé as its new CEO,
-                    succeeding Yuriy Adamchuk.
-                  </p>
-                  <a href="" class="blogLink"
-                    >Read more <span class="appButtonArrow"></span
-                  ></a>
+                  <div class="blogCardInfo">
+                    <p class="blogTitle">
+                      Avenga Appoints New CEO: Ludovic Gaudé Succeeds Yuriy
+                      Adamchuk
+                    </p>
+                    <p class="blogText">
+                      Avenga, a leading global engineering and consulting
+                      platform, has announced Ludovic Gaudé as its new CEO,
+                      succeeding Yuriy Adamchuk.
+                    </p>
+                    <a href="" class="blogLink">Read more </a>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -955,7 +963,7 @@
           <div class="logoSearchContainer">
             <img src="./src/assets/icons/logo-icon.svg" alt="Avenga logo" />
           </div>
-          <nav class="nav">
+          <nav class="nav" id="footerNav">
             <ul class="navList">
               <li class="navItem">
                 <a href="#" class="navLink">Home</a>

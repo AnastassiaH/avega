@@ -62,7 +62,6 @@
 .openingBottom {
   height: 96px;
   width: 100%;
-  background-color: var(--primary-color);
 }
 
 .companiesList {
@@ -71,4 +70,5 @@
   gap: 80px;
   justify-content: center;
   align-items: center;
+  background-color: var(--primary-color);
 }
